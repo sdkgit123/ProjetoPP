@@ -9,6 +9,7 @@ public class Main extends JFrame implements ActionListener {
         // Criando a janela do menu inicial:
         setTitle("BATALHA NAVAL");
         setBounds(300, 300, 600, 600);
+        setUndecorated(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -21,8 +22,7 @@ public class Main extends JFrame implements ActionListener {
         JPanel creditosPanel = criarCreditosPanel();
 
         // Adicione os painéis como abas do JTabbedPane
-        tabbedPane.addTab(null, telaInicialPanel); // Passamos null como o painel de título, já que não queremos exibi-lo
-        tabbedPane.addTab(null, creditosPanel);
+        tabbedPane.addTab(null, telaInicialPanel);
 
         // Adicione o JTabbedPane à janela
         add(tabbedPane);
@@ -47,16 +47,25 @@ public class Main extends JFrame implements ActionListener {
 
 
         // Criando os botões do menu inicial:
-        String caminhonj = "C:\\Users\\Elizabeth\\Documents\\GIT\\ProjetoPP\\Fotos\\a763b44e9beb57f6fb2c7c981f5d8bad.png";
+        String caminhonj = "C:\\Users\\Elizabeth\\Documents\\GIT\\ProjetoPP\\Fotos\\pngwing.com.png";
         ImageIcon fotonj = new ImageIcon(caminhonj);
         JButton novoJogoButton = new JButton("Iniciar", fotonj);
-        novoJogoButton.setBounds(200, 250, 220, 136);
-        String caminhoso = "C:\\Users\\Elizabeth\\Documents\\GIT\\ProjetoPP\\Fotos\\kisspng-football-boot-nike-cleat-sports-shoes-nike-women39s-magista-onda-fg-outdoor-soccer-cl-5ba9b593553bc9.0097233315378487233491.png";
+        novoJogoButton.setLocation(250, 250);
+        novoJogoButton.setSize(110,50);
+        novoJogoButton.setContentAreaFilled(false);
+        novoJogoButton.setBorderPainted(false);
+        String caminhoso = "C:\\Users\\Elizabeth\\Documents\\GIT\\ProjetoPP\\Fotos\\59060c290cbeef0acff9a659 (1).png";
         ImageIcon fotoso = new ImageIcon(caminhoso);
-        JButton sobreButton = new JButton("Sobre", fotoso);
-        sobreButton.setBounds(150, 310, 300, 50);
-        JButton sairButton = new JButton("Sair");
-        sairButton.setBounds(150, 370, 300, 50);
+        JButton sobreButton = new JButton(fotoso);
+        sobreButton.setBounds(220, 310, 160, 50);
+        sobreButton.setContentAreaFilled(false);
+        sobreButton.setBorderPainted(false);
+        String caminhosa = "C:\\Users\\Elizabeth\\Documents\\GIT\\ProjetoPP\\Fotos\\ir.png";
+        ImageIcon fotosa = new ImageIcon(caminhosa);
+        JButton sairButton = new JButton(fotosa);
+        sairButton.setBounds(270, 370, 50, 50);
+        sairButton.setContentAreaFilled(false);
+        sairButton.setBorderPainted(false);
 
         // Criando um novo painel para o título e centralizando:
         JPanel tituloPanel = new JPanel();
